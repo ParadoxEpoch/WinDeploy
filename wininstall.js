@@ -200,6 +200,7 @@ async function selectWim() {
 
     printLogo('Choose a Windows version');
 
+    fs.ensureDirSync(wimDir);
     let files = fs.readdirSync(wimDir);
 
 	// If no WIM files found, prompt user to change directory
