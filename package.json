@@ -1,0 +1,24 @@
+{
+  "name": "windeploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "chalk-pipe": "^5.1.1",
+    "diskpart": "^1.0.2",
+    "fast-xml-parser": "^4.0.0-beta.0",
+    "figures": "^4.0.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "node-cmd": "^5.0.0",
+    "node-powershell": "^5.0.1",
+    "systeminformation": "^5.9.15"
+  }
+}
