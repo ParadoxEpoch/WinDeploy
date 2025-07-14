@@ -15,7 +15,7 @@ async function main(getSysInfo = false) {
         message: 'What would you like to do?',
         choices: [
             {name: 'Install Windows', value: 'wininstall'},
-            {name: 'Repair Windows', value: 'winrepair'},
+            //{name: 'Repair Windows', value: 'winrepair'},
             {name: 'View System Information', value: 'sysinfo'},
         ]
     });
@@ -33,7 +33,7 @@ async function main(getSysInfo = false) {
         case 'sysinfo':
             // system info
             printLogo('Getting System Information');
-            console.log(await sysInfo.get.all());
+            await getSystemInfo();
             break;
     }
 
