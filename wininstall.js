@@ -1,7 +1,6 @@
 const {msg, printLogo, epochToDuration, sleep, shellExec} = require('./func/common');
 const sysInfo = require('./func/sysinfo');
 const inquirer = require('inquirer');
-//const cmd = require('node-cmd');
 const diskpart = require('diskpart');
 const fs = require('fs-extra');
 const path = require('path');
@@ -55,9 +54,6 @@ exports.start = async function(tasks) {
 
     const totalDuration = epochToDuration(Date.now() - startTime);
     console.log(msg.bold('\nProvisioning Completed in ' + totalDuration));
-
-    console.log('\n');
-    console.log(JSON.stringify(results));
 
     return results;
 
