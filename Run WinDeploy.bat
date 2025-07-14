@@ -63,4 +63,4 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 ::::::::::::::::::::::::::::::::::::::::::::::::
 :: Run WinDeploy Launcher in Windows Terminal ::
 ::::::::::::::::::::::::::::::::::::::::::::::::
-wt launcher.cmd
+wt "%cd%\launcher.cmd"
