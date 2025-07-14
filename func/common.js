@@ -9,29 +9,28 @@ const msg = {
     error: chalk.bold.red,
     warn: chalk.bold.yellow,
     success: chalk.bold.green,
-    brand: chalk.bold.hex('#7f00ff')
+    brand: chalk.bold.hex('#0078d7')
 }
 exports.msg = msg;
 
 // * Adds padding to both side of a string to center align it to the ASCII logo in the console
 function centerString(text) {
-    if (text >= 40) return text; // If text is too long to center, do nothing.
-    const padding = Math.floor((40 - text.length) / 2);
+    if (text >= 42) return text; // If text is too long to center, do nothing.
+    const padding = Math.floor((42 - text.length) / 2);
     return ' '.repeat(padding) + text + ' '.repeat(padding);
 }
 
 exports.printLogo = function(text, style) {
     console.clear();
     console.log('                                        ');
-    console.log(msg.brand('  _      ___      ___           __         '));
-    console.log(msg.brand(' | | /| / (_)__  / _ \\___ ___  / /__  __ __'));
-    console.log(msg.brand(' | |/ |/ / / _ \\/ // / -_) _ \\/ / _ \\/ // /'));
-    console.log(msg.brand(' |__/|__/_/_//_/____/\\__/ .__/_/\\___/\\_, / '));
-    console.log(msg.brand('                       /_/          /___/  '));
-    console.log('                                        ');
-    console.log('----------------------------------------');
+    console.log(msg.brand(' _      ___      ___           __         '));
+    console.log(msg.brand('| | /| / (_)__  / _ \\___ ___  / /__  __ __'));
+    console.log(msg.brand('| |/ |/ / / _ \\/ // / -_) _ \\/ / _ \\/ // /'));
+    console.log(msg.brand('|__/|__/_/_//_/____/\\__/ .__/_/\\___/\\_, / '));
+    console.log(msg.brand('                      /_/          /___/  '));
+    console.log('------------------------------------------');
     console.log(msg[style || 'bold'](centerString(text || 'WinDeploy v2.0.0')));
-    console.log('----------------------------------------');
+    console.log('------------------------------------------');
     console.log('                                        ');
 }
 
